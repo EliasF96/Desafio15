@@ -1,0 +1,108 @@
+CONSIGNA
+Se desea crear una aplicación web para controlar el inventario de una tienda. La aplicación debe permitir agregar nuevos productos, modificar los existentes, eliminarlos y mostrar una lista con todos los productos existentes. Cada producto debe tener un nombre, una descripción y un precio.
+
+La lógica de negocio de la aplicación es la siguiente:
+
+Agregar producto: el usuario podrá agregar un producto ingresando su nombre, descripción y precio. Si los datos son válidos, se agregará el producto a la lista.
+Modificar producto: el usuario podrá modificar un producto existente ingresando su nombre, descripción y precio. Si los datos son válidos, se actualizará el producto en la lista.
+Eliminar producto: el usuario podrá eliminar un producto existente seleccionándolo de la lista.
+Mostrar lista de productos: se mostrará una lista con todos los productos existentes, ordenados alfabéticamente por nombre.
+
+Datos de entrada y salida:
+
+* Entrada: el usuario ingresará el nombre, descripción y precio de cada producto.
+* Salida: la aplicación mostrará una lista con todos los productos existentes.
+
+Requerimientos funcionales:
+
+* Agregar producto: la aplicación debe permitir al usuario agregar un producto ingresando su nombre, descripción y precio.
+* Modificar producto: la aplicación debe permitir al usuario modificar un producto existente ingresando su nombre, descripción y precio.
+* Eliminar producto: la aplicación debe permitir al usuario eliminar un producto existente seleccionándolo de la lista.
+* Mostrar lista de productos: la aplicación debe mostrar una lista con todos los productos existentes, ordenados alfabéticamente por nombre.
+
+Requerimientos no funcionales:
+
+* Validación de datos: la aplicación debe validar que los datos ingresados por el usuario sean válidos.
+* Persistencia de datos: los datos de la lista de productos deben persistir aunque se actualice la página.
+* Pasos a realizar para resolver el ejercicio:
+
+1.Crear un nuevo proyecto de React utilizando el comando npx create-react-app.
+2.Crear un componente ProductList que se encargue de mostrar la lista de productos.
+3.Utilizar el hook useState para crear un estado products que contendrá la lista de productos.
+4.Utilizar el hook useEffect para cargar los productos desde una API al cargar la página.
+5.Crear un componente ProductForm que se encargue de agregar y modificar productos.
+6.Utilizar el hook useState para crear un estado selectedProduct que contendrá el producto seleccionado para ser modificado.
+7.Utilizar el hook useState para crear un estado formProduct que contendrá los datos ingresados por el usuario en el formulario.
+8.Crear una función handleSubmit que se encargue de agregar o modificar el producto según corresponda.
+9.Crear una función handleDelete que se encargue de eliminar un producto de la lista.
+10.Agregar renderizado condicional al componente ProductForm para que muestre los datos del producto seleccionado en caso de estar en modo edición.
+11.Agregar validación de datos al formulario para que no se permita agregar un producto sin nombre o precio.
+12.Persistir los datos utilizando una API REST o un sistema de almacenamiento local como localStorage.
+
+OBJETIVOS
+
+Se desea crear una aplicación web para controlar el inventario de una tienda. La aplicación debe permitir agregar nuevos productos, modificar los existentes, eliminarlos y mostrar una lista con todos los productos existentes. Cada producto debe tener un nombre, una descripción y un precio.
+
+La lógica de negocio de la aplicación es la siguiente:
+
+Agregar producto: el usuario podrá agregar un producto ingresando su nombre, descripción y precio. Si los datos son válidos, se agregará el producto a la lista.
+Modificar producto: el usuario podrá modificar un producto existente ingresando su nombre, descripción y precio. Si los datos son válidos, se actualizará el producto en la lista.
+Eliminar producto: el usuario podrá eliminar un producto existente seleccionándolo de la lista.
+Mostrar lista de productos: se mostrará una lista con todos los productos existentes, ordenados alfabéticamente por nombre.
+
+Datos de entrada y salida:
+
+* Entrada: el usuario ingresará el nombre, descripción y precio de cada producto.
+* Salida: la aplicación mostrará una lista con todos los productos existentes.
+
+Requerimientos funcionales:
+
+* Agregar producto: la aplicación debe permitir al usuario agregar un producto ingresando su nombre, descripción y precio.
+* Modificar producto: la aplicación debe permitir al usuario modificar un producto existente ingresando su nombre, descripción y precio.
+* Eliminar producto: la aplicación debe permitir al usuario eliminar un producto existente seleccionándolo de la lista.
+* Mostrar lista de productos: la aplicación debe mostrar una lista con todos los productos existentes, ordenados alfabéticamente por nombre.
+
+Requerimientos no funcionales:
+
+* Validación de datos: la aplicación debe validar que los datos ingresados por el usuario sean válidos.
+* Persistencia de datos: los datos de la lista de productos deben persistir aunque se actualice la página.
+* Pasos a realizar para resolver el ejercicio:
+
+1.Crear un nuevo proyecto de React utilizando el comando npx create-react-app.
+2.Crear un componente ProductList que se encargue de mostrar la lista de productos.
+3.Utilizar el hook useState para crear un estado products que contendrá la lista de productos.
+4.Utilizar el hook useEffect para cargar los productos desde una API al cargar la página.
+5.Crear un componente ProductForm que se encargue de agregar y modificar productos.
+6.Utilizar el hook useState para crear un estado selectedProduct que contendrá el producto seleccionado para ser modificado.
+7.Utilizar el hook useState para crear un estado formProduct que contendrá los datos ingresados por el usuario en el formulario.
+8.Crear una función handleSubmit que se encargue de agregar o modificar el producto según corresponda.
+9.Crear una función handleDelete que se encargue de eliminar un producto de la lista.
+10.Agregar renderizado condicional al componente ProductForm para que muestre los datos del producto seleccionado en caso de estar en modo edición.
+11.Agregar validación de datos al formulario para que no se permita agregar un producto sin nombre o precio.
+12.Persistir los datos utilizando una API REST o un sistema de almacenamiento local como localStorage.
+instrucciones-desafío-15.txt
+Mostrando instrucciones-desafío-15.txt.
+
+//EJEMPLO DE useEffect
+function App() {
+  const [stateCar, setStateCar] = useState(false)
+  const [count, setCount] = useState(0)
+//useeffect es una seccion donde se ejecuta el codigo interno cada vez que nota cambios en variables declaradas al final en el []
+  useEffect(()=>{
+    console.log(`Total: ${count}`)
+  }, [count ])
+
+  const turnOnTurnOff = () =>{
+    setStateCar(!stateCar);
+    setCount(count+1)
+  }
+  return (
+    <div className="App">
+      <header className='App-header'>
+        <h3>El coche esta: {stateCar ? "On" : "Off"}</h3>
+        <h4>Clicks: {count}</h4>
+        <button onClick={ turnOnTurnOff}>On/Off</button>
+      </header>
+    </div>
+  );
+}

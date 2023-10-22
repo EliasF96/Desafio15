@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "GX HeadPhones",
+      "desc": "HD Headphones ",
+      "price": "$10.500",
+      "id": 12
+    },
+    {
+      "name": "Desk",
+      "desc": "Wooden desk",
+      "price": "$5750",
+      "id": 15
+    },
+    {
+      "name": "Screen 40'",
+      "desc": "Screen for an cinema view",
+      "price": "$10.000",
+      "id": 16
+    },
+    {
+      "name": "Sounboard",
+      "desc": "Sound keyboard for ambience",
+      "price": "$3.0500",
+      "id": 17
+    },
+    {
+      "name": "Desk chair",
+      "desc": "Chair for better comfort",
+      "price": "$2500",
+      "id": 18
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
